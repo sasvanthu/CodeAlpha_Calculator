@@ -1,0 +1,130 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+}
+
+.calculator {
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 320px;
+}
+
+.calculator-display {
+    width: calc(100% - 20px);
+    height: 60px;
+    background-color: #222;
+    color: #fff;
+    font-size: 2.5em;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box; 
+    overflow: hidden;
+}
+
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 20px;
+    font-size: 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    outline: none; 
+}
+
+.btn:hover {
+    background-color: #777;
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn-clear {
+    background-color: #d9534f; 
+    grid-column: span 1;
+}
+
+.btn-clear:hover {
+    background-color: #c9302c;
+}
+
+.btn-operator {
+    background-color: #f0ad4e; 
+}
+
+.btn-operator:hover {
+    background-color: #ec971f;
+}
+
+.btn-equals {
+    background-color: #5cb85c; 
+    grid-row: span 2; 
+    height: auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-equals:hover {
+    background-color: #4cae4c;
+}
+
+.btn-number {
+    background-color: #6c757d; /* Grey */
+}
+
+.btn-number:hover {
+    background-color: #5a6268;
+}
+
+.btn-zero {
+    grid-column: span 2; /* Span two columns for the zero button */
+}
+
+.btn-decimal {
+    background-color: #6c757d;
+}
+
+.btn-decimal:hover {
+    background-color: #5a6268;
+}
+
+/* Specific grid placement for buttons to make the layout right */
+.calculator-buttons button:nth-child(1) { grid-area: 1 / 1 / 2 / 2; } 
+.calculator-buttons button:nth-child(2) { grid-area: 1 / 2 / 2 / 3; } 
+.calculator-buttons button:nth-child(3) { grid-area: 1 / 3 / 2 / 4; } 
+.calculator-buttons button:nth-child(4) { grid-area: 1 / 4 / 2 / 5; } 
+
+.calculator-buttons button:nth-child(5) { grid-area: 2 / 1 / 3 / 2; } 
+.calculator-buttons button:nth-child(6) { grid-area: 2 / 2 / 3 / 3; } 
+.calculator-buttons button:nth-child(7) { grid-area: 2 / 3 / 3 / 4; } 
+.calculator-buttons button:nth-child(8) { grid-area: 2 / 4 / 3 / 5; } 
+
+.calculator-buttons button:nth-child(9) { grid-area: 3 / 1 / 4 / 2; } 
+.calculator-buttons button:nth-child(10) { grid-area: 3 / 2 / 4 / 3; }
+.calculator-buttons button:nth-child(11) { grid-area: 3 / 3 / 4 / 4; }
+.calculator-buttons button:nth-child(12) { grid-area: 4 / 1 / 5 / 2; }
+.calculator-buttons button:nth-child(13) { grid-area: 4 / 2 / 5 / 3; }
+.calculator-buttons button:nth-child(14) { grid-area: 4 / 3 / 5 / 4; }
+.calculator-buttons button:nth-child(15) { grid-area: 3 / 4 / 5 / 5; }
+
+.calculator-buttons button:nth-child(16) { grid-area: 5 / 1 / 6 / 3; }
+.calculator-buttons button:nth-child(17) { grid-area: 5 / 3 / 6 / 4; }
